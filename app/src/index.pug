@@ -1,0 +1,14 @@
+doctype html
+html(lang="ru")
+  include ./temp/1.head/head.pug
+  body
+    include ./include.pug
+    include ./project-content.pug
+    noscript
+      | У Вас отключен JavaScript. Сайт может отображаться некорректно.
+      | Рекомендуем включить JavaScript.
+    include ./temp/2.header/header.pug
+    include ./temp/4.main/main.pug
+    include ./temp/3.footer/footer.pug
+    script(src="../libs/vanilla-tabs/vanilla-tabs.min.js")
+    script(src="js/scripts.js" type="module")

@@ -1,0 +1,40 @@
+@import "helper/libs";
+@import "helper/functions";
+@import "helper/mixins";
+@import "helper/fonts";
+@import "helper/reset";
+
+// @import 'helper/variables-bootstrap';
+@import "helper/variables";
+
+// @import "sprites/png-sprite";
+@import "sprites/svg-sprite";
+@import "sprites/svg-mixin";
+@import "helper/general";
+
+// ================= Импорты =================
+
+@import "../temp/2.header/header";
+@import "../temp/2.header/logo/logo";
+@import "../temp/2.header/soc/soc";
+@import "../temp/2.header/burgerBtn/burgerBtn";
+@import "../temp/2.header/closeMenuBtn/closeMenuBtn";
+@import "../temp/2.header/menu/menu";
+@import "../temp/3.footer/footer";
+@import "../temp/3.footer/copyright/copyright";
+@import "../temp/3.footer/footer-nav/footer-nav";
+@import "../temp/3.footer/policy-nav/policy-nav";
+@import "../temp/3.footer/contacts/contacts";
+@import "../temp/4.main/main";
+@import "../temp/3.footer/newsletter/newsletter";
+@import "../temp/4.main/filter/filter";
+@import "../temp/4.main/breadcrumbs/breadcrumbs";
+@import "../temp/4.main/productCard/productCard";
+@import "../temp/4.main/productSlider/productSlider";
+@import "../temp/4.main/product/product";
+@import "../temp/4.main/productInfo/productInfo";
+
+/* stylelint-disable-next-line no-invalid-position-at-import-rule */
+// @import "helper/media";
+
+/// @author Ludmila

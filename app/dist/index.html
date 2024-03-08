@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Интернет магазин">
+  <title>Turbologo</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="libs/normalize/normalize.css" crossorigin>
+  <link rel="stylesheet" href="libs/normalize/normalize.css" type="text/css">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+  <noscript>
+    У Вас отключен JavaScript. Сайт может отображаться некорректно.
+    Рекомендуем включить JavaScript.
+  </noscript>
+  <header class="header">
+    <div class="container">
+      <div class="header__body">
+        <!-- TEMPLATE: burgerBtn-->
+        <div class="burger">
+          <button class="btnReset burgerBtn header__burgerBtn" aria-label="Открыть меню"><span class="burgerBtn__line"></span><span class="burgerBtn__text">Меню</span></button>
+        </div>
+        <!-- /TEMPLATE: burgerBtn-->
+        <div class="header__top">
+          <!-- START logo-->
+          <div class="logo header__logo"><a href="#"><img class="custom-logo" src="../img2/logo.svg" alt="Turbologo"></a></div>
+          <!-- END logo-->
+          <div class="address">Гельсингфорсская ул., 4 корпус 1, Санкт-Петербург, 194044</div>
+          <div class="enter"><a href="#">Вход</a></div>
+          <!-- START soc-->
+          <div class="soc">
+            <ul>
+              <li><a class="soc__link soc__telegram" href="#">Связаться в telegram</a></li>
+              <li><a class="soc__link soc__whatsapp" href="#">Написать в whatsapp</a></li>
+            </ul>
+          </div>
+          <!-- END soc-->
+          <div class="tel"><a class="tel__link" href="tel:+78129049157">+7 (812) 904-91-57</a></div>
+          <div class="basket">
+            <div class="basket__buttonOuter">
+              <button class="btnReset basket__button" type="button" aria-label="Открыть корзину"></button><span class="basket__count"><span>2</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <nav class="navbar">
+            <ul class="menu header__menu">
+              <li><a href="#">O компании</a>
+                <ul>
+                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="#">Сотрудники</a></li>
+                  <li><a href="#">Сертификаты</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Оплата / Доставка</a></li>
+              <li><a href="#">Гарантии</a></li>
+              <li><a href="#">Опыт</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__mobile">
+          <div class="header__mobileNav">
+            <div class="closeMenuBtn"></div>
+            <div class="header__mobileGroup">
+              <nav class="navbar">
+                <ul class="menu header__mobileMenu">
+                  <li><a href="#">O компании</a>
+                    <ul>
+                      <li><a href="#">Отзывы</a></li>
+                      <li><a href="#">Сотрудники</a></li>
+                      <li><a href="#">Сертификаты</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Каталог</a></li>
+                  <li><a href="#">Услуги</a></li>
+                  <li><a href="#">Оплата / Доставка</a></li>
+                  <li><a href="#">Гарантии</a></li>
+                  <li><a href="#">Опыт</a></li>
+                  <li><a href="#">Новости</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__mobileGroup">
+              <div class="tel"><a class="tel__link" href="tel:+78129049157">+7 (812) 904-91-57</a></div>
+              <!-- START soc-->
+              <div class="soc">
+                <ul>
+                  <li><a class="soc__link soc__telegram" href="#">Связаться в telegram</a></li>
+                  <li><a class="soc__link soc__whatsapp" href="#">Написать в whatsapp</a></li>
+                </ul>
+              </div>
+              <!-- END soc-->
+            </div>
+            <div class="header__mobileGroup">
+              <div class="enter"><a href="#">Вход</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div>
+      <div class="container">
+        <!-- START breadcrumbs-->
+        <div class="breadcrumbs">
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><span>ИБП CyberPower BU600E</span></li>
+          </ul>
+        </div>
+        <!-- END breadcrumbs-->
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            <!-- START filter-->
+            <div class="catalog">
+              <div class="catalog__title">Каталог</div>
+              <btn class="btnReset catalog__button">Фильтр</btn>
+              <div class="filters">
+                <div class="filters__category filter">
+                  <div class="filter__title">Категория</div>
+                  <form action="#">
+                    <label>
+                      <input type="checkbox" name=""><span>Интерактивные ИБП</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>SMART и онлайн ИБП</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>Трехфазные системы</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>Распределители питания</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>Мониторинг и управление</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>ИБП для систем отопления</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>Сетевые фильтры</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>Стабилизатор напряжения</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>Батареи</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>Программное обеспечение</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>Технологии</span>
+                    </label>
+                  </form>
+                </div>
+                <div class="filters__manufacturer filter">
+                  <div class="filter__title">Производитель</div>
+                  <form action="#">
+                    <label>
+                      <input type="checkbox" name=""><span>Мониторинг и управление</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>ИБП для систем отопления</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>Сетевые фильтры</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>Стабилизатор напряжения</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name=""><span>Батареи</span>
+                    </label>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- END filter-->
+          </div>
+          <div class="col-2">
+            <!-- START productCard-->
+            <div class="productCard">
+              <h1>ИБП CyberPower BU600E</h1>
+              <div class="productCard__top">
+                <!-- START productSlider-->
+                <div class="productSlider">
+                  <div class="productSlider__labels"><span class="labelHit">Хит</span><span class="labelNew">Новинка</span></div>
+                  <div class="f-carousel productSlider__slider">
+                    <div class="f-carousel__slide" data-thumb-src="img2/product-img-small.jpg" data-fancybox="gallery"><img alt="" data-lazy-src="img2/product-img-big.jpg"></div>
+                    <div class="f-carousel__slide" data-thumb-src="img2/product-img-small.jpg" data-fancybox="gallery"><img alt="" data-lazy-src="img2/product-img-big.jpg"></div>
+                    <div class="f-carousel__slide" data-thumb-src="img2/product-img-small.jpg" data-fancybox="gallery"><img alt="" data-lazy-src="img2/product-img-big.jpg"></div>
+                  </div>
+                </div>
+                <!-- END productSlider-->
+                <!-- START product-->
+                <div class="product">
+                  <div class="product__description">
+                    <ul>
+                      <li>Артикул: <span>343e3o</span></li>
+                      <li>Watts 36</li>
+                      <li>Выходное напряжение (В перем.) <span>230 ± 10%</span></li>
+                      <li>Время работы при 90Вт (мин) <span>18</span></li>
+                      <li>Выходные разъемы <span>Schuko x 3</span></li>
+                    </ul>
+                  </div>
+                  <div class="product__group">
+                    <div class="product__cost"><span class="product__price noWrap">23 000 p.</span><span class="product__oldPrice noWrap">23 000 p.</span><span class="product__discount">-20%</span></div>
+                    <div class="product__count noWrap">
+                      <button class="btnReset product__minusBtn" aria-label="Убрать единицу товара">-</button><span class="product__number">1</span>
+                      <button class="btnReset product__plusBtn" aria-label="Добавить единицу товара">+</button>
+                    </div>
+                  </div>
+                  <div class="product__order">
+                    <button class="mainBtn mainBtn_small product__addToCardBtn">В корзину</button>
+                    <button class="mainBtn mainBtn_small mainBtn_transparent product__quickOrderBtn">Быстрый заказ</button>
+                  </div>
+                </div>
+                <!-- END product-->
+              </div>
+              <div class="productCard__bottom">
+                <!-- START productInfo-->
+                <div class="productInfo">
+                  <ul class="tabs" id="prodTabs">
+                    <li data-title="Характеристики">
+                      <table class="productInfo__spec">
+                        <colgroup>
+                          <col>
+                          <col>
+                        </colgroup>
+                        <tr>
+                          <td>Производитель</td>
+                          <td>CyberPower</td>
+                        </tr>
+                        <tr>
+                          <td>Страна производства</td>
+                          <td>Тайвань</td>
+                        </tr>
+                        <tr>
+                          <td>Мощность выход</td>
+                          <td>340 W</td>
+                        </tr>
+                        <tr>
+                          <td>Напряжение вход/выход</td>
+                          <td>220 V</td>
+                        </tr>
+                        <tr>
+                          <td>Количество фаз вход/выход</td>
+                          <td>3</td>
+                        </tr>
+                      </table>
+                    </li>
+                    <li data-title="Документация">
+                      <div class="productInfo__doc"><a href="#" download>Документ.pdf</a><a href="#" download>Документ2.docx</a></div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- END productInfo-->
+              </div>
+            </div>
+            <!-- END productCard-->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <section class="darkBg">
+      <div class="bigContainer">
+        <div class="darkBg__body">
+          <div class="container">
+            <!-- START newsletter-->
+            <div class="news-letter">
+              <div class="news-letter__title">Полезная рассылка</div>
+              <div class="news-letter__form">
+                <form action="#" method="POST">
+                  <label for="email">Почта</label>
+                  <input id="email" type="email" name="email" placeholder="E-mail..." maxlength="50" required>
+                  <input id="checkbox" type="checkbox" name="checkbox" required>
+                  <label for="checkbox">
+                    Подтверждаю свое согласие на обработку своих персональных данных
+                    в соответствии с Политикой конфиденциальности
+                  </label>
+                  <input type="submit" value="Отправить">
+                </form>
+              </div>
+            </div>
+            <!-- END newsletter-->
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="footer__inner">
+        <!-- START logo-->
+        <div class="logo"><a href="#"><img class="custom-logo" src="../img2/logo.svg" alt="Turbologo"></a></div>
+        <!-- END logo-->
+        <!-- START soc-->
+        <div class="soc">
+          <ul>
+            <li><a class="soc__link soc__telegram" href="#">Связаться в telegram</a></li>
+            <li><a class="soc__link soc__whatsapp" href="#">Написать в whatsapp</a></li>
+          </ul>
+        </div>
+        <!-- END soc-->
+        <!-- START copyright-->
+        <div class="copyright">2021 &copy; Все права защищены</div>
+        <!-- END copyright-->
+        <!-- START footer-nav-->
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#">Доставка / оплата</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="##">Политика обработки персональных данных</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Гарантии</a></li>
+            <li><a href="#">Опыт</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <!-- END footer-nav-->
+        <!-- START contacts-->
+        <ul class="contacts">
+          <li class="contacts__item contacts__tel">
+            <div class="tel"><a class="tel__link" href="tel:+78129049157">+7 (812) 904-91-57</a></div>
+          </li>
+          <li class="contacts__item contacts__address address">Гельсингфорсская ул., 4 корпус 1, Санкт-Петербург, 194044</li>
+          <li class="contacts__item contacts__email"><a href="mailto:HJYolv@woevg.com">HJYolv@woevg.com</a></li>
+        </ul>
+        <!-- END contacts-->
+        <!-- START policy-nav-->
+        <nav class="policy-nav">
+          <ul>
+            <li><a href="#">Политика обработки персональных данных</a></li>
+          </ul>
+        </nav>
+        <!-- END policy-nav-->
+      </div>
+    </div>
+  </footer>
+  <script src="../libs/vanilla-tabs/vanilla-tabs.min.js"></script>
+  <script src="js/scripts.js" type="module"></script>
+</body>
+
+</html>

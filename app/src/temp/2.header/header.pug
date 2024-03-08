@@ -1,0 +1,36 @@
+header.header
+  .container
+    .header__body
+      +burgerBtn("header__burgerBtn")
+      .header__top
+        +logo("header__logo")
+        .address Гельсингфорсская ул., 4 корпус 1,  Санкт-Петербург, 194044
+        .enter
+          a(href="#") Вход
+        +soc
+        .tel
+          a.tel__link(href="tel:+78129049157")
+            | +7 (812) 904-91-57
+        .basket
+          .basket__buttonOuter
+            button.btnReset.basket__button(type="button" aria-label="Открыть корзину")
+            span.basket__count #[span 2]
+      .header__bottom
+        nav.navbar
+          +menu("header__menu")
+      .header__mobile
+        .header__mobileNav
+          .closeMenuBtn
+          .header__mobileGroup
+            nav.navbar
+              +menu("header__mobileMenu")
+          .header__mobileGroup
+            .tel
+              a.tel__link(href="tel:+78129049157")
+                | +7 (812) 904-91-57
+            +soc
+          .header__mobileGroup
+            .enter
+              a(href="#") Вход
+
+

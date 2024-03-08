@@ -1,0 +1,164 @@
+// ================= TEMPLATE: footer =================
+.footer {
+  background-color: #f3f3f3;
+
+  &__inner {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 53px 0 28px;
+  }
+
+  .soc {
+    margin-bottom: 30px;
+
+    ul {
+      gap: 5px 39px;
+    }
+  }
+
+  .copyright {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 935px) { // 935
+
+    .logo {
+      margin-bottom: 50px;
+    }
+
+    .footer-nav {
+      margin-bottom: 47px;
+      text-align: center;
+    }
+
+    .tel {
+      margin-bottom: 36px;
+    }
+
+    .contacts {
+      margin-bottom: 30px;
+      text-align: center;
+
+      &__item:nth-child(2) {
+        margin-bottom: 18px;
+      }
+    }
+
+    .policy-nav {
+      margin-bottom: 17px;
+      text-align: center;
+    }
+
+    .footer-nav li:first-child {
+      margin-bottom: 18px;
+    }
+
+    .footer-nav li:not(:last-child, :first-child) {
+      margin-bottom: 23px;
+    }
+
+    .soc {
+      order: 1;
+      margin-bottom: 15px;
+
+      ul {
+        gap: 5px 17px;
+      }
+    }
+
+    .copyright {
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    // Убираем ссылку на политику обработки
+    .footer-nav li:has(a[href="##"]) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 936px) {
+    &__inner {
+      display: block;
+      column-count: 5;
+      column-gap: 5px;
+      padding-top: 98px;
+    }
+
+    .logo {
+      margin-bottom: 31px;
+      padding-left: 6px;
+    }
+
+    .copyright {
+      padding-left: 3px;
+      max-width: 130px;
+    }
+
+    .footer-nav {
+      break-before: column;
+    }
+
+    .footer-nav li a {
+      display: block;
+    }
+
+    .footer-nav li:nth-child(-n+3) a {
+      margin-left: 14px;
+    }
+
+    .footer-nav li:nth-child(n+4):nth-child(-n+7) a {
+      margin-left: 44px;
+    }
+
+    .footer-nav li:nth-child(n+8) a {
+      margin-left: 30px;
+    }
+
+    .footer-nav li:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    .footer-nav li:nth-child(3),
+    .footer-nav li:nth-child(7) {
+      break-after: column;
+    }
+
+    .contacts {
+      break-before: column;
+
+      li {
+        margin-left: 0;
+      }
+    }
+
+    .policy-nav {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &__inner {
+      column-gap: 50px;
+    }
+
+    .footer-nav li:nth-child(-n+3) a {
+      margin-left: 28px;
+    }
+
+    .footer-nav li:nth-child(n+4):nth-child(-n+7) a {
+      margin-left: 88px;
+    }
+
+    .footer-nav li:nth-child(n+8) a {
+      margin-left: 61px;
+    }
+
+    .contacts {
+      li {
+        margin-left: 35px;
+      }
+    }
+  }
+}

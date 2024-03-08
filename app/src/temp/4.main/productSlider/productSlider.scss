@@ -1,0 +1,97 @@
+// ================= TEMPLATE: productSlider =================
+
+.productSlider {
+  position: relative;
+  flex-shrink: 0;
+  width: 386px;
+  height: 324px;
+  background-color: #f3f3f3;
+
+  &__labels {
+    position: absolute;
+    left: 9px;
+    top: 8px;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+  }
+
+  @media (max-width: 480px) {
+    width: 350px;
+    height: 235px;
+
+    &__labels {
+      left: 10px;
+      top: 10px;
+    }
+  }
+
+  @media (max-width: 390px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.f-carousel__slide {
+  width: 386px;
+  height: 324px;
+
+  @media (max-width: 480px) {
+    width: 350px;
+    height: 235px;
+  }
+
+  @media (max-width: 390px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.f-carousel__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.f-thumbs__slide__button {
+  border: 1px solid #dbdbdb;
+}
+
+.f-thumbs__slide.is-nav-selected .f-thumbs__slide__button {
+  border: 1px solid #1648a8;
+}
+
+.f-thumbs {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+
+  @media (max-width: 480px) {
+    left: 10px;
+    bottom: -2px;
+  }
+}
+
+.f-thumbs__track {
+  transform: none !important;
+}
+
+.f-thumbs.is-classic {
+  --f-thumb-width: 41px;
+  --f-thumb-height: 35px;
+  --f-thumb-gap: 9px;
+  --f-thumb-opacity: 1;
+  --f-thumb-selected-opacity: 1;
+  --f-thumb-border-radius: 0;
+}
+
+.f-thumbs.is-classic .f-thumbs__slide__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// @media screen and (min-width: px){}

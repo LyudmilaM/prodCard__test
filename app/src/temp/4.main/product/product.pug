@@ -1,0 +1,29 @@
+mixin product ()
+  // START product
+  .product
+    .product__description
+      ul
+        li
+          | Артикул: #[span 343e3o]
+        li
+          | Watts 36
+        li
+          | Выходное напряжение (В перем.) #[span 230 ± 10%]
+        li
+          | Время работы при 90Вт (мин) #[span 18]
+        li
+          | Выходные разъемы #[span Schuko x 3]
+    .product__group
+      .product__cost
+        span.product__price.noWrap 23 000 p.
+        span.product__oldPrice.noWrap 23 000 p.
+        span.product__discount -20%
+      .product__count.noWrap
+        button.btnReset.product__minusBtn(aria-label="Убрать единицу товара") -
+        span.product__number 1
+        button.btnReset.product__plusBtn(aria-label="Добавить единицу товара") +
+    .product__order
+      button.mainBtn.mainBtn_small.product__addToCardBtn В корзину
+      button.mainBtn.mainBtn_small.mainBtn_transparent.product__quickOrderBtn Быстрый заказ
+
+  // END product

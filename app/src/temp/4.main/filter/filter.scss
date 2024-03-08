@@ -1,0 +1,137 @@
+// ================= TEMPLATE: filter =================
+.catalog {
+  &__title {
+    margin-bottom: 21px;
+    font-family: $font2;
+    font-weight: 400;
+    font-size: 36px;
+    text-indent: -4px;
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 6px 5px 5px 54px;
+    width: 350px;
+    height: 49px;
+    font-weight: 500;
+    font-size: 16px;
+    background-image: url("../img2/bgFilter.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 13px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img2/filter.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: 390px) {
+      width: 100%;
+    }
+  }
+}
+
+.filter {
+  &:not(:last-child) {
+    margin-bottom: 47px;
+  }
+
+  &__title {
+    margin-bottom: 19px;
+    font-family: $font3;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  form {
+    background-color: #fff;
+  }
+
+  label {
+    position: relative;
+    display: block;
+    padding: 13px 13px 13px 0;
+    background-color: #fff;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  input[type="checkbox"] + span {
+    position: relative;
+    display: inline-block;
+    margin-left: 33px;
+  }
+
+  input[type="checkbox"] + span::before,
+  input[type="checkbox"] + span::after {
+    position: absolute;
+    left: -29px;
+    width: 12px;
+    height: 12px;
+  }
+
+  input[type="checkbox"] + span::before {
+    content: "";
+    top: 0;
+    z-index: 1;
+    border: 1px solid #969696;
+  }
+
+  input[type="checkbox"] + span::after {
+    content: "\2714";
+    top: 1px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: #000;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  input[type="checkbox"]:checked + span::after {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 709px) {
+  .catalog {
+    padding-bottom: 36px;
+  }
+
+  .filters {
+    display: none;
+  }
+}
+
+@media (min-width: 710px) {
+  .catalog__button,
+  .catalog__title {
+    display: none;
+  }
+}
+
+// @media screen and (min-width: px){}

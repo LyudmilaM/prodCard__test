@@ -1,0 +1,115 @@
+// ================= TEMPLATE: productInfo =================
+.productInfo {
+  &__spec {
+    padding-top: 10px;
+    width: 100%;
+    font-family: $font2;
+    font-weight: 400;
+
+    col:first-child {
+      width: 81%;
+
+      @media (max-width: 480px) {
+        width: 70%;
+      }
+    }
+
+    tr:not(:last-child) {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-image: url("../img2/line.svg");
+      }
+    }
+
+    td {
+      padding: 16px 0;
+    }
+
+    @media (max-width: 480px) {
+      padding-top: 0;
+    }
+  }
+
+  &__doc {
+    padding-top: 30px;
+
+    a {
+      position: relative;
+      display: block;
+      margin-left: -3px;
+      padding: 10px;
+      padding-left: 32px;
+      font-size: 16px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 24px;
+        height: 24px;
+        background-image: url("../img2/doc.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+
+      &:hover {
+        color: #1f2324;
+      }
+    }
+
+    @media (max-width: 480px) {
+      padding-top: 20px;
+    }
+  }
+}
+
+.tabs.style__horizontal .tabs__content.is__active {
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+  padding: 0;
+}
+
+.tabs.style__horizontal .tabs__nav .tabs__nav_link {
+  margin: 0;
+  border: 0;
+  padding: 12px 35px 10px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #1f2324;
+  background: #e5e5e5;
+
+  @media (max-width: 480px) {
+    padding: 12px 25px 10px;
+  }
+}
+
+.tabs.style__horizontal .tabs__nav .tabs__nav_link:first-child {
+  border-top-left-radius: 5px;
+}
+
+.tabs.style__horizontal .tabs__nav .tabs__nav_link:last-child {
+  border-top-right-radius: 5px;
+  padding: 12px 26px 10px;
+
+  @media (max-width: 480px) {
+    padding: 12px 19px 10px;
+  }
+}
+
+.tabs.style__horizontal .tabs__nav .tabs__nav_link.is__active {
+  font-weight: 500;
+  color: #fff;
+  background: #42516e;
+}
+
+// @media screen and (min-width: px){}

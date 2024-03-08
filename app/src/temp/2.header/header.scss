@@ -1,0 +1,345 @@
+// ================= TEMPLATE: header =================
+body.lock {
+  overflow: hidden;
+}
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #fff;
+
+  &__body {
+    padding: 25px 0 15px;
+  }
+
+  &__mobile {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0s ease 1s, visibility 0s ease 1s;
+  }
+
+  &__mobile.visible {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0s ease 0s, visibility 0s ease 0s;
+  }
+
+  &__mobileNav {
+    position: absolute;
+    left: -100%;
+    top: 0;
+
+    // padding-top: 22px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.3s linear;
+  }
+
+  &__mobileMenu {
+    flex-flow: column wrap;
+    align-items: flex-start;
+    font-size: 18px;
+    gap: 42px 0;
+  }
+
+  &__mobileGroup {
+    padding: 50px 15px 50px 43px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #d9d9d9;
+    }
+
+    .tel {
+      margin-bottom: 30px;
+      padding-top: 7px;
+
+      &__link {
+        font-size: 20px;
+      }
+    }
+
+    .soc {
+      &__link {
+        width: 37px;
+        height: 37px;
+      }
+    }
+
+    .enter {
+      a {
+        padding-left: 38px;
+        font-size: 21px;
+
+        &::before {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    &:has(.tel, .soc) {
+      padding-bottom: 33px;
+    }
+
+    &:has(.enter) {
+      padding-top: 35px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    gap: 20px 0;
+  }
+
+  &__mobile.visible &__mobileNav {
+    left: 0;
+  }
+}
+
+.address {
+  font-size: 12px;
+  color: #969696;
+}
+
+.enter {
+  a {
+    position: relative;
+    display: block;
+    padding-left: 25px;
+    font-family: $font2;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #969696;
+    background-color: transparent;
+    transition: color 0.3s;
+    text-decoration-skip-ink: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img2/user.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: background-image 0.3s;
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        color: #1648a8;
+      }
+
+      @media (hover: none) {
+        color: #969696;
+      }
+    }
+
+    &:hover::before {
+      background-image: url("../img2/user-hover.svg");
+    }
+  }
+}
+
+.tel {
+  &__link {
+    position: relative;
+    padding-left: 29px;
+    font-size: 16px;
+    white-space: nowrap;
+    color: $main-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img2/phone-icon.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.basket {
+  position: relative;
+  cursor: pointer;
+
+  &__buttonOuter {
+    position: relative;
+  }
+
+  &__button {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img2/basket.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s;
+  }
+
+  &__count {
+    position: absolute;
+    left: calc(100% - 9px);
+    top: -6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #fff;
+    background-color: #1648a8;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+  }
+
+  &:hover &__button {
+    background-image: url("../img2/basket-hover.svg");
+  }
+
+  &:hover &__count {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    .basket {
+      margin-left: 62px;
+    }
+
+    .tel {
+      margin-left: 75px;
+    }
+
+    .soc {
+      margin-left: 70px;
+      transform: translateY(3px);
+    }
+
+    .enter {
+      margin-left: 100px;
+    }
+
+    .logo {
+      margin-right: auto;
+      padding-left: 2px;
+      transform: translateY(13px);
+    }
+  }
+
+  .basket {
+    transform: translateY(4px);
+
+    &__count {
+      border-radius: 50%;
+      padding: 3px 6px;
+
+      span {
+        z-index: 2;
+      }
+    }
+
+    &__count::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      border-radius: 50%;
+      padding-top: 100%;
+      width: 100%;
+      background-color: #1648a8;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header__top {
+    .address,
+    .enter,
+    .soc,
+    .tel {
+      display: none;
+    }
+
+    .logo {
+      position: absolute;
+      left: 15px;
+      top: 19px;
+    }
+
+    .basket {
+      position: absolute;
+      left: 50%;
+      top: -4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 191px;
+      height: 55px;
+      background-image: url("../img2/basket-bg.svg");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      transform: translateX(calc(-50% + 13px));
+      transition: background-image 0.3s;
+
+      &__buttonOuter {
+        padding-top: 12px;
+      }
+
+      &__button {
+        background-image: url("../img2/basket.svg");
+      }
+
+      &__count {
+        left: calc(100% + 2px);
+        top: 5px;
+        font-size: 16px;
+        background-color: transparent;
+      }
+
+      &:hover {
+        background-image: url("../img2/basket-bg-hover.svg");
+
+        .basket__button {
+          background-image: url("../img2/basket-hover-mobile.svg");
+        }
+      }
+    }
+  }
+
+  .header__bottom {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__body {
+    padding: 10px 0 15px;
+  }
+}

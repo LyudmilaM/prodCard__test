@@ -1,0 +1,72 @@
+// ================= TEMPLATE: menu =================
+.menu {
+  display: flex;
+
+  li {
+    position: relative;
+  }
+
+  a {
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: #1648a8;
+    }
+  }
+
+  ul {
+    position: absolute;
+    z-index: 25;
+    padding: 15px;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+  }
+
+  li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  li > ul > li {
+    margin-bottom: 15px;
+  }
+
+  li > ul > li > a {
+    font-weight: 500;
+    color: #000;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu {
+    align-items: flex-start;
+
+    // margin-right: 15px;
+    // margin-bottom: 10px;
+    // margin-left: 15px;
+  }
+
+  li > ul {
+    left: 40px;
+    top: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu {
+    flex-flow: row wrap;
+    padding: 10px 0;
+    gap: 20px 49px;
+
+    li > ul {
+      left: 0;
+      top: 100%;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+mixin productInfo ()
+  // START productInfo
+  .productInfo
+    ul.tabs#prodTabs
+      li(data-title="Характеристики")
+        table.productInfo__spec
+          colgroup
+            col
+            col
+          tr
+            td Производитель
+            td CyberPower
+          tr
+            td Страна производства
+            td Тайвань
+          tr
+            td Мощность выход
+            td 340 W
+          tr
+            td Напряжение вход/выход
+            td 220 V
+          tr
+            td Количество фаз вход/выход
+            td 3
+      li(data-title="Документация")
+        .productInfo__doc
+          a(href="#" download) Документ.pdf
+          a(href="#" download) Документ2.docx
+  // END productInfo

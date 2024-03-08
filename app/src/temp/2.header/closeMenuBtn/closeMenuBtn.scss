@@ -1,0 +1,37 @@
+// ================= TEMPLATE: closeMenuBtn =================
+.closeMenuBtn {
+  position: absolute;
+  right: 3px;
+  top: 1px;
+  z-index: 20000;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 1px;
+    background-color: #1f2324;
+    transition: background-color 0.3s;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+// @media screen and (min-width: px){}

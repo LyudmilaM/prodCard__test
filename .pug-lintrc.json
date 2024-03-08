@@ -1,0 +1,30 @@
+{
+  "extends": "pug-lint-config-clock",
+  "requireClassLiteralsBeforeIdLiterals": true,
+  "disallowIdLiterals": null,
+  "validateAttributeQuoteMarks": "\"",
+  "validateAttributeSeparator": {
+    "separator": " ",
+    "multiLineSeparator": "\n  "
+  },
+  "validateLineBreaks": "CRLF",
+  "requireLowerCaseAttributes": null,
+  "requireLowerCaseTags": null,
+  "requireSpecificAttributes": [
+    {
+      "form": "action"
+    },
+    {
+      "img": [
+        "src",
+        "alt"
+      ]
+    },
+    {
+      "input": "type"
+    },
+    {
+      "input[type=submit]": "value"
+    }
+  ]
+}

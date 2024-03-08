@@ -1,0 +1,34 @@
+@mixin fonts($name, $localName, $folders, $font-weight, $font-style) {
+  @font-face {
+    src: local($localName);
+    src: url("../fonts/" + $folders + $name + ".eot");
+    src: url("../fonts/" + $folders + $name + ".eot?#iefix") format("embedded-opentype");
+    src: url("../fonts/" + $folders + $name + ".ttf") format("truetype");
+    src: url("../fonts/" + $folders + $name + ".woff2") format("woff2");
+    src: url("../fonts/" + $folders + $name + ".woff") format("woff");
+    font-family: $name;
+    font-weight: #{$font-weight};
+    font-style: #{$font-style};
+    font-display: swap;
+  }
+}
+
+// Не в папках
+@mixin fonts2($name, $localName, $font-weight, $font-style) {
+  @font-face {
+    src: local($localName);
+    src: url("../fonts/" + $name + ".eot");
+    src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype");
+    src: url("../fonts/" + $name + ".ttf") format("truetype");
+    src: url("../fonts/" + $name + ".woff2") format("woff2");
+    src: url("../fonts/" + $name + ".woff") format("woff");
+    font-family: $name;
+    font-weight: #{$font-weight};
+    font-style: #{$font-style};
+    font-display: swap;
+  }
+}
+
+@include fonts2("Montserrat-Regular", "Montserrat-Regular", "400", "normal");
+@include fonts2("Montserrat-Medium", "Montserrat-Medium", "500", "normal");
+@include fonts2("Montserrat-SemiBold", "Montserrat-SemiBold", "600", "normal");

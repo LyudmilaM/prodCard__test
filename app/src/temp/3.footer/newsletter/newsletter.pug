@@ -1,0 +1,14 @@
+mixin newsletter ()
+  // START newsletter
+  .news-letter
+    .news-letter__title Полезная рассылка
+    .news-letter__form
+      form(action="#" method="POST")
+        label(for="email") Почта
+        input#email(type="email" name="email" placeholder="E-mail..." maxlength="50" required)
+        input#checkbox(type="checkbox" name="checkbox" required)
+        label(for="checkbox")
+          | Подтверждаю свое согласие на обработку своих персональных данных
+          | в соответствии с Политикой конфиденциальности
+        input(type="submit" value="Отправить")
+  // END newsletter

@@ -1,0 +1,66 @@
+$rootFontSize: 14;
+
+// $baseWidth указываем без паддингов безопасности,
+// это ширина нашего wrapper
+$baseWidth: 1520;
+
+// Rem для шрифтов
+@function rem($fontSize) {
+  @return round($fontSize / $rootFontSize * 1rem * 1000) / 1000;
+}
+
+// Em для паддингов
+@function em($padding, $parentFontSize) {
+  @return round($padding / $parentFontSize * 1em * 1000) / 1000;
+}
+
+// % для ширины и маржинов c fullWidth
+@function per($width, $fullWidth) {
+  @return round($width / $fullWidth * 100% * 1000) / 1000;
+}
+
+// % для ширины и маржинов
+@function per2($width) {
+  @return round($width / $baseWidth * 100% * 1000) / 1000;
+}
+
+// line-height в относительных единицах
+@function lh($lineHeightPx, $fontSizePx) {
+  @return round($lineHeightPx / $fontSizePx * 1000) / 1000;
+}
+
+// Функция для миксина textShadow
+@function generateshadow($number, $color, $smooth: 0) {
+  $val:
+    -#{$number}px 0 #{$smooth}px $color,
+    #{$number}px 0 #{$smooth}px $color,
+    0 -#{$number}px #{$smooth}px $color,
+    0 #{$number}px #{$smooth}px $color;
+
+  @for $i from 1 through $number {
+    $val:
+      #{$val},
+      #{$i}px #{$number}px #{$smooth}px #{$color},
+      #{$number}px #{$i}px #{$smooth}px #{$color},
+      #{$i}px -#{$number}px #{$smooth}px #{$color},
+      #{$number}px -#{$i}px #{$smooth}px #{$color},
+      -#{$i}px #{$number}px #{$smooth}px #{$color},
+      -#{$number}px #{$i}px #{$smooth}px #{$color},
+      -#{$i}px -#{$number}px #{$smooth}px #{$color},
+      -#{$number}px -#{$i}px #{$smooth}px #{$color};
+  }
+
+  @return $val;
+}
+
+// Функция для миксина aspectRatio
+// В параметрах - $widthinparts - ширина в частях,
+// $heightinpart - высота в частях
+// percentageOfParentWidth - ширина блока в процентах от ширины родителя,
+// например, если блок 100% занимает родительской шинины,
+// то можем не указывать - т.к. по умолчанию,
+// иначе, например, @include aspectRatio(4, 3, 30)
+
+@function getpercentageofaspectratio($widthinparts, $heightinparts, $percentageofparentwidth: 100) {
+  @return round($heightinparts / $widthinparts * $percentageofparentwidth * 1% * 100) / 100;
+}

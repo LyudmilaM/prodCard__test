@@ -1,0 +1,42 @@
+// ================= TEMPLATE: productCard =================
+.productCard {
+  h1 {
+    margin-bottom: 32px;
+
+    @media (max-width: 1100px) {
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      text-align: left;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 48px;
+    gap: 30px;
+
+    @media (max-width: 1100px) {
+      flex-flow: column wrap;
+      align-items: center;
+      margin-right: 30px;
+    }
+
+    @media (max-width: 709px) {
+      margin-right: 0;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 50px;
+      gap: 18px;
+    }
+  }
+}
+
+// @media screen and (min-width: px){}

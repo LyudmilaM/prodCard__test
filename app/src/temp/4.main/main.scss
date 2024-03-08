@@ -1,0 +1,9 @@
+// ================= TEMPLATE: page =================
+
+.main {
+  padding-bottom: 75px;
+
+  @media (max-width: 480px) {
+    padding-bottom: 7px;
+  }
+}

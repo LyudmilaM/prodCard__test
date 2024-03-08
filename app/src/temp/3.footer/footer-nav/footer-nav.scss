@@ -1,0 +1,18 @@
+// ================= TEMPLATE: footer-nav =================
+.footer-nav {
+  ul {
+    list-style: none;
+  }
+
+  li:nth-child(-n + 3) a {
+    color: #000;
+  }
+
+  a {
+    font-family: $font2;
+    font-weight: 400;
+    color: #1f2324;
+  }
+}
+
+// @media screen and (min-width: px){}

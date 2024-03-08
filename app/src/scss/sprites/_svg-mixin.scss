@@ -1,0 +1,123 @@
+/* stylelint-disable scss/at-if-no-null */
+/* stylelint-disable max-line-length */
+/* stylelint-disable scss/no-global-function-names */
+/// @author Mike Street
+/// @group Sprite
+
+$sprite: map-get($icons, sprite) !default;
+$mq-base-font-size: 16px !default;
+
+@function sprite-attr($icon, $attr) {
+  $newIcon: map-get($icons, $icon);
+
+  @if $newIcon == null {
+    @warn "CAN'T FIND an icon with the name #{$icon}";
+  }
+
+  @return map-get($newIcon, $attr);
+}
+
+@function mq-px2em($px, $base-font-size: $mq-base-font-size) {
+  @if unitless($px) {
+    @warn "Sprite units not specified. Assume that the value is in pixels, so we convert to pixels, but this may give incorrect parameters.";
+
+    @return ($px * 1px / $base-font-size) * 1em;
+  }
+
+  @if unit($px) == em {
+    @return $px;
+  }
+
+  @return ($px / $base-font-size) * 1em;
+}
+
+@function icon-attr($icon) {
+  $attr: (
+    width: sprite-attr($icon, width),
+    height: sprite-attr($icon, height),
+    x: sprite-attr($icon, backgroundx),
+    y: sprite-attr($icon, backgroundy)
+  );
+
+  @return $attr;
+}
+
+@function icon_width($icon) {
+  @return mq-px2em(sprite-attr($icon, width));
+}
+
+@function icon_height($icon) {
+  @return mq-px2em(sprite-attr($icon, height));
+}
+
+@mixin spriteSVG($icon, $type: all) {
+  $iconMap: icon-attr($icon);
+
+  @if $type == all {
+    // Shares the backgrounds
+    // display: inline-block;
+    /* stylelint-disable-next-line function-url-quotes */
+    background-image: url(map-get($sprite, svgpath));
+    background-size: mq-px2em(map-get($sprite, width)) mq-px2em(map-get($sprite, height));
+  }
+
+  // Outputs dimensions in em
+  @if $type == all or $type == size {
+    width: mq-px2em(map-get($iconMap, width));
+    height: mq-px2em(map-get($iconMap, height));
+  }
+
+  // Outputs background position in em
+  @if $type == all or $type == bg {
+    background-position: mq-px2em(map-get($iconMap, x)) mq-px2em(map-get($iconMap, y));
+  }
+}
+
+// Пример использования миксина sprite:
+// Может принимать 2 параметра: icon и type
+// Можем в качестве параметров ввести только название картинки,
+// тогда получим
+// display: inline-block, width, heigth, background-image, background-size, background-position
+// либо вторым параметром можем указать
+// 'size' - получим только width и heigth
+// 'bg' - получим background-position
+// Удобно, если для ховера есть еще картинка в спрайте
+
+/// Add an SVG sprite icon using em positioning
+/// @param {string} $icon - The name of the icon
+/// @param {string} $type [all] - The properties wanted (can be `all`, `size` or `bg`).
+/// - `all` ensures the icon has the background, position and size.
+/// - `size` is just for dimensions
+/// - `bg` just  applies the backgrounds to an element
+///
+/// @example scss - Usage
+/// .class {
+/// 	@include spriteSVG(arrow);
+/// 	&:hover {
+/// 		@include spriteSVG(arrowDown, bg)
+/// 	}
+/// }
+///
+/// @example css - Output
+/// .class {
+/// 	display: inline-block;
+/// 	background-image: url("../img/sprite.svg");
+/// 	background-size: 34.25em 32.1875em;
+/// }
+/// .class {
+/// 	width: 1.3125em;
+/// 	height: 1.3125em;
+/// 	background-position: -0.3125em -0.3125em;
+/// }
+/// .class:hover {
+/// 	background-position: -2.25em -2.25em;
+/// }
+
+// Пример использования функции перевод
+// значений из px в em, используя функцию mq-px2em
+
+/// @example scss
+///  $font-size-in-ems: mq-px2em(16px);
+///  p { font-size: mq-px2em(16px); }
+
+//====================================================================

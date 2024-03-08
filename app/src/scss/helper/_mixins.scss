@@ -1,0 +1,449 @@
+// ==== Ленточки ====
+@mixin boxShadow1() {
+  box-shadow:
+    0 16px 24px 2px rgb(33 37 41 / 2%),
+    0 6px 30px 5px rgb(33 37 41 / 4%),
+    0 8px 10px -5px rgb(33 37 41 / 10%);
+}
+
+// @include ribbon1(90, #f8463f, #c02031);
+@mixin ribbon1($width, $color1, $color2) {
+  position: absolute;
+  right: 10px;
+  top: -6px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    border-top: 10px solid $color1;
+    border-right: #{$width / 2}px solid transparent;
+    border-left: #{$width / 2}px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  span {
+    position: relative;
+    display: block;
+    border-top-right-radius: 8px;
+    padding: 12px 8px 10px;
+    width: #{$width}px;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    background-color: $color1;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 6px;
+    }
+
+    &::before {
+      left: -6px;
+      width: 6px;
+      background-color: $color1;
+    }
+
+    &::after {
+      left: -8px;
+      border-radius: 8px 8px 0 0;
+      width: 8px;
+      background-color: $color2;
+    }
+  }
+}
+
+// @include ribbon2(60, #f47530, #f47530);
+@mixin ribbon2($width, $color1, $color2) {
+  position: absolute;
+  left: 25px;
+  top: -6px;
+  z-index: 2;
+  border-top-left-radius: 3px;
+  padding: 10px 0;
+  width: #{$width}px;
+  text-align: center;
+  color: #fff;
+  background-color: $color1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  &::before {
+    right: -5.5px;
+    top: -0.1px;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid $color2;
+  }
+
+  &::after {
+    left: 0;
+    bottom: #{$width / 2 * -1}px;
+    border-right: #{$width / 2}px solid $color1;
+    border-bottom: #{$width / 2}px solid transparent;
+    border-left: #{$width / 2}px solid $color1;
+  }
+}
+
+// @include ribbon3(60, #59324c, #000);
+@mixin ribbon3($height, $color1, $color2) {
+  position: absolute;
+  left: -8px;
+  top: 20px;
+  z-index: 2;
+  padding-right: 60px;
+  padding-left: 15px;
+  height: #{$height}px;
+  line-height: #{$height}px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $color1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0.1px;
+    top: -8.5px;
+    border-bottom: 9px solid $color2;
+    border-left: 9px solid transparent;
+  }
+
+  &::after {
+    right: -15px;
+    top: 0;
+    border-top: #{$height / 2}px solid transparent;
+    border-bottom: #{$height / 2}px solid transparent;
+    border-left: 15px solid $color1;
+  }
+}
+
+// @include ribbon4(30, #00b3ed, #000);
+@mixin ribbon4($height, $color1, $color2) {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  z-index: 2;
+  padding-right: 22px;
+  padding-left: 15px;
+  height: #{$height}px;
+  box-shadow: -1px 2px 3px rgb(0 0 0 / 30%);
+  line-height: #{$height}px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $color1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  // Закрываем тень, появляющуюся слева,
+  // вытягиваем при этом в длину слева
+  &::before {
+    position: absolute;
+    left: -6.5px;
+    top: 0;
+    border-radius: 5px 0 0 5px;
+    width: 7px;
+    height: calc(100% + 7px);
+    background: inherit;
+  }
+
+  &::after {
+    left: -4.5px;
+    bottom: -5px;
+    border-radius: 5px 0 0 5px;
+    width: 5px;
+    height: 5px;
+    background-color: #add8e6;
+  }
+}
+
+@mixin ribbon5($height, $color1, $color2) {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  z-index: 2;
+  padding-right: 22px;
+  padding-left: 15px;
+  height: #{$height}px;
+  box-shadow: -1px 2px 3px rgb(0 0 0 / 30%);
+  line-height: #{$height}px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $color1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  // Закрываем тень, появляющуюся слева,
+  // вытягиваем при этом в длину слева
+  &::before {
+    left: -6.5px;
+    top: 0;
+    border-radius: 5px 0 0 5px;
+    width: 7px;
+    height: calc(100% + 7px);
+    background: inherit;
+  }
+
+  &::after {
+    left: -4.5px;
+    bottom: -5px;
+    border-radius: 5px 0 0 5px;
+    width: 5px;
+    height: 5px;
+    background-color: #add8e6;
+  }
+}
+
+/* stylelint-disable value-no-vendor-prefix */
+
+// Обводка вокруг текста
+
+@mixin textShadow($number, $color, $smooth: 0) {
+  text-shadow: generateshadow($number, $color, $smooth);
+}
+
+// Использование: @include textShadow(3, #f00);
+// Пример:
+// .rform__title {
+//   @include textShadow(3, #f00);
+//   font-weight: 700;
+//   font-size: 120px;
+//   letter-spacing: 15px;
+//   text-align: center;
+//   color: #000b26;
+// }
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin multilineEllipsis($countLine: 3) {
+  display: block;
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* stylelint-disable-next-line property-no-unknown */
+  -webkit-box-orient: vertical;
+  /* stylelint-disable-next-line property-no-unknown */
+  -webkit-line-clamp: $countLine;
+}
+
+// == Для aspectRatio ==============
+
+// Блок для размещения на нем
+// абсолютом media.
+// Например, блок должен быть 4 : 3, при этом он занимает 100% ширины родителя:
+// aspectRatio(4, 3)
+// Например, блок должен быть 4 : 3, при этом он занимает 50% ширины родителя:
+// aspectRatio(4, 3, 50)
+
+// То есть третье значение в aspectRatio должно совпадать с width блока
+// .block {
+//   @include aspectRatio(2, 1, 30);
+//   width: 30%;
+// }
+
+@mixin aspectRatio($widthinparts, $heightinparts, $percentageofparentwidth: 100) {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  padding-bottom: getpercentageofaspectratio($widthinparts, $heightinparts, $percentageofparentwidth);
+  height: 0;
+  font-size: 0;
+}
+
+@mixin hideText {
+  overflow: hidden;
+  font-size: 0;
+  white-space: nowrap;
+  text-indent: -1000%;
+}
+
+@mixin hidden {
+  position: absolute;
+  clip-path: inset(50%);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+}
+
+@mixin hidden2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@mixin hidden3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+@mixin visuallyHidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@mixin visuallyVisible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+// Параметры миксина: ширина, высота
+// и цвет треугольника.
+// Ширина - по основанию, то есть сторона,
+// противоположная указывающему острию.
+// Высота - расстояние от основания до
+// острия.
+// Пример:
+// &::after {
+//  @include arDown(15, 30, #ff0000);}
+// Будет вытянутый прямоугольник
+// сверху-вниз
+
+@mixin arRight($width, $height, $color) {
+  display: block;
+  border-top: #{$width / 2}px solid transparent;
+  border-bottom: #{$width / 2}px solid transparent;
+  border-left: #{$height}px solid $color;
+  width: 0;
+  height: 0;
+}
+
+@mixin arLeft($width, $height, $color) {
+  display: block;
+  border-top: #{$width / 2}px solid transparent;
+  border-right: #{$height}px solid $color;
+  border-bottom: #{$width / 2}px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+@mixin arTop($width, $height, $color) {
+  display: block;
+  border-right: #{$width / 2}px solid transparent;
+  border-bottom: #{$height}px solid $color;
+  border-left: #{$width / 2}px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+@mixin arDown($width, $height, $color) {
+  display: block;
+  border-top: #{$height}px solid $color;
+  border-right: #{$width / 2}px solid transparent;
+  border-left: #{$width / 2}px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+@mixin posAbsFullSize {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+// Указываем ширину и высоту
+// внутреннего прямоугольника
+@mixin hex($width, $height, $color) {
+  position: relative;
+  margin-top: #{$height / 2}px;
+  margin-bottom: #{$height / 2}px;
+  width: #{$width} + "px";
+  height: #{$height} + "px";
+  background-color: $color;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    border-right: #{$width / 2}px solid transparent;
+    border-left: #{$width / 2}px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  &::before {
+    top: #{$height / 2 * -1}px;
+    border-bottom: #{$height / 2}px solid $color;
+  }
+
+  &::after {
+    bottom: #{$height / 2 * -1}px;
+    border-top: #{$height / 2}px solid $color;
+  }
+}
+
+@mixin hexRotate($width, $height, $color) {
+  position: relative;
+  margin-right: #{$width / 2}px;
+  margin-left: #{$width / 2}px;
+  width: #{$width} + "px";
+  height: #{$height} + "px";
+  background-color: $color;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-top: #{$height / 2}px solid transparent;
+    border-bottom: #{$height / 2}px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  &::before {
+    left: #{$width / 2 * -1}px;
+    border-right: #{$width / 2}px solid $color;
+  }
+
+  &::after {
+    right: #{$width / 2 * -1}px;
+    border-left: #{$width / 2}px solid $color;
+  }
+}

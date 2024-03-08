@@ -1,0 +1,13 @@
+// ================= TEMPLATE: logo =================
+.custom-logo {
+  width: 132px;
+  height: 33px;
+  object-fit: cover;
+}
+
+@media (max-width: 480px) {
+  .header .custom-logo {
+    width: 109px;
+    height: 27px;
+  }
+}

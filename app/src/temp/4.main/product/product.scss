@@ -1,0 +1,119 @@
+// ================= TEMPLATE: product =================
+.product {
+  &__description {
+    ul {
+      list-style: none;
+    }
+
+    li {
+      line-height: 2.364;
+      color: #969696;
+
+      &:first-child {
+        margin-bottom: 22px;
+        font-size: 12px;
+        line-height: 1.764;
+        color: #1f2324;
+
+        span {
+          font-weight: 800;
+        }
+
+        @media (max-width: 480px) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    li span {
+      color: #1f2324;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 43px 0 45px;
+    gap: 0 43px;
+
+    @media (max-width: 480px) {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      padding: 26px 0 36px;
+      gap: 0 24px;
+    }
+  }
+
+  &__cost {
+    position: relative;
+  }
+
+  &__price {
+    margin-right: 20px;
+    font-family: $font3;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000;
+
+    @media (max-width: 480px) {
+      margin-right: 20px;
+    }
+  }
+
+  &__oldPrice {
+    font-family: $font2;
+    font-weight: 400;
+    color: #c4c4c4;
+
+    @media (max-width: 480px) {
+      margin-right: 25px;
+    }
+  }
+
+  &__discount {
+    position: absolute;
+    right: 25px;
+    top: -24px;
+    font-family: $font2;
+    font-weight: 400;
+    color: #000;
+    background-color: #ffe4e4;
+
+    @media (max-width: 480px) {
+      position: relative;
+      right: auto;
+      top: -4px;
+    }
+  }
+
+  &__number {
+    margin: 0 10px;
+    line-height: 1.2;
+  }
+
+  &__order {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px 30px;
+  }
+
+  // &__addToCardBtn {
+  //   margin-right: 30px;
+  // }
+
+  &__minusBtn,
+  &__plusBtn {
+    border-radius: 4px;
+    padding: 0 5px;
+    width: 20px;
+    height: 20px;
+    box-shadow: inset 1px 0 1px 0 rgb(164 164 164 / 25%);
+    background-color: #eaeff8;
+  }
+
+  @media (max-width: 480px) {
+    align-self: flex-start;
+  }
+}
+
+// @media screen and (min-width: px){}

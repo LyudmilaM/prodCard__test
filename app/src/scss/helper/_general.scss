@@ -1,0 +1,241 @@
+// ----------------- Общие стили -----------------
+.noWrap {
+  white-space: nowrap;
+}
+
+.clear {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.breakAll {
+  word-break: break-all;
+}
+
+.break {
+  overflow-wrap: break-word;
+}
+
+.btnReset {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+.hiddenEl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overflowEllipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.flexible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgResp {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.imgBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+// ----------------- Базовые стили -----------------
+html {
+  display: flex;
+  flex-direction: column;
+  outline-offset: -1px;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 14px;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex: auto;
+  flex-flow: column nowrap;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  min-width: 320px;
+  font-family: $font1;
+  font-weight: 500;
+  color: $main-color;
+  background-color: #fff;
+}
+
+main {
+  flex: 1 1 0%;
+}
+
+header,
+main,
+footer {
+  min-width: 320px;
+}
+
+.bigContainer {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1253px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0 30px;
+}
+
+.col-1 {
+  width: calc(100% / 100 * 25 - 21px);
+}
+
+.col-2 {
+  width: calc(100% / 100 * 75 - 15px);
+}
+
+@media (max-width: 709px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-1,
+  .col-2 {
+    width: 100%;
+  }
+}
+
+.darkBg {
+  background-color: #2756b0;
+
+  &__body {
+    background-image: url("../img2/background.svg");
+    background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #1648a8;
+
+    @media (max-width: 992px) {
+      background-size: 100% 50%;
+    }
+  }
+}
+
+h1 {
+  font-size: 32px;
+
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
+}
+
+a {
+  color: $main-color;
+
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.labelHit,
+.labelNew {
+  overflow: hidden;
+  padding: 3px 8px;
+  padding-bottom: 2px;
+  max-width: 100px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+.labelHit {
+  background-color: #1648a8;
+}
+
+.labelNew {
+  background-color: #ebbf25;
+}
+
+.mainBtn,
+input[type="submit"] {
+  display: inline-block;
+  vertical-align: baseline;
+  outline: none;
+  border: none;
+  border-radius: 24px;
+  padding: 15px 61px;
+  font-family: $font2;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  background-color: #ffd230;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    background-color: #f4bf00;
+  }
+}
+
+.mainBtn_transparent {
+  outline: 1px solid #1648a8;
+  outline-offset: -1px;
+  color: #1648a8;
+  background-color: transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    background-color: #1648a8;
+  }
+}
+
+.mainBtn_small {
+  padding: 11px 20px;
+}
+
+.mainBtn_transparent.mainBtn_small {
+  padding: 11px 24px;
+}

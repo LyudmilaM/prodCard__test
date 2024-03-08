@@ -1,0 +1,5 @@
+/* stylelint-disable max-line-length */
+$icons: (
+  sprite: (width: {{spriteWidth}}px, height: {{spriteHeight}}px, svgpath: "../img/sprites/svg/sprite.css.svg"),
+  {{#shapes}}{{base}}: (width: {{width.inner}}px, height: {{height.inner}}px, backgroundx: {{position.absolute.x}}px, backgroundy: {{position.absolute.y}}px),
+  {{/shapes}});

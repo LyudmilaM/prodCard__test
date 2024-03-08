@@ -1,0 +1,39 @@
+// ================= Mobile first =================
+
+// xs до 576px (0 - 576) по умолчанию,
+// поэтому медиа запрос не делается
+
+// sm >= 576px (больше или равно 576px)
+@media screen and (min-width: 576px) {}
+
+// md >= 768px (больше или равно 768px)
+@media screen and (min-width: 768px) {}
+
+// lg >= 992px (больше или равно 992px)
+@media screen and (min-width: 992px) {}
+
+// xl >= 1200px (больше или равно 1200px)
+@media screen and (min-width: 1200px) {}
+
+// xxl >= 1400px (больше или равно 1400px)
+@media screen and (min-width: 1400px) {}
+
+// ================= С max-width =================
+
+// xxl <= 1399.98px (меньше или равно 1399.98px)
+@media screen and (max-width: 1399.98px) {}
+
+// xl <= 1199.98px (меньше или равно 1199.98px)
+@media screen and (max-width: 1199.98px) {}
+
+// lg <= 991,98px (меньше или равно 991.98px)
+@media screen and (max-width: 991.98px) {}
+
+// md <= 767,98px (меньше или равно)
+@media screen and (max-width: 767.98px) {}
+
+// sm <= 575.98px (меньше или равно 575.98px)
+@media screen and (max-width: 575.98px) {}
+
+// Здесь xxl больше 1400px - по умолчанию, поэтому
+// медиа запрос не делается

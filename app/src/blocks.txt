@@ -1,0 +1,10 @@
+Блоки:
+
+header
+
+
+content
+
+
+footer
+

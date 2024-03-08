@@ -1,0 +1,39 @@
+// ================= TEMPLATE: soc =================
+.soc {
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    gap: 5px 37px;
+  }
+
+  &__link {
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-indent: -10000px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s;
+    cursor: pointer;
+  }
+
+  &__telegram {
+    background-image: url("../img2/telegram.svg");
+
+    &:hover {
+      background-image: url("../img2/telegram-hover.svg");
+    }
+  }
+
+  &__whatsapp {
+    background-image: url("../img2/whatsapp.svg");
+
+    &:hover {
+      background-image: url("../img2/whatsapp-hover.svg");
+    }
+  }
+}
+
+// @media screen and (min-width: px){}
