@@ -1644,6 +1644,9 @@ body.lock {
   }
 }
 .productInfo__doc {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
   padding-top: 30px;
 }
 .productInfo__doc a {
