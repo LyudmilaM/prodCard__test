@@ -1177,7 +1177,6 @@ body.lock {
   height: 0;
   font-size: 0;
   opacity: 0;
-  visibility: hidden;
 }
 .news-letter input[type=checkbox]:checked + label::after {
   opacity: 1;
